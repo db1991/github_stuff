@@ -1,28 +1,14 @@
-import sys
-def fileread():
-	seqarray = [sys.argv[1]]#empty list for sequences
-	f = openandread() #open file
-	seqdata = [] #sequences stored in list form
-	line = f.readline()#read each line
-	while True:
-            if not line:
-                break
-            if line [0] == '>':       # Check to see if we're onto the next record
-                break
-            seqdata.append(line.rstrip()) #appends sequences to seqdata
-            line = f.readline()
-        nts = ''.join(seqdata).replace(" ", "").replace("\r", "")
-        seqarray.append(nts) #appends cleared data to seq array
-        
-      	if not line:
-            return fastaid, seqarray
 
-def Hamming_distance():
-	s = seqarray[0]
-	t = seqarray[1]
-	for d in s,t:
-		if s[d] == t[d]:
-			d+0
-		if s[d] != t[d]:
-		 	d+1
-		print d
+with open('rosalind_HAMM.txt') as f:
+	s = f.readline().strip()
+	t = f.readline().strip()
+	if len(s) != len(t):
+		print "both DNA fragments must be the same length"
+	else:
+		lengthlist=[] #use empty list
+		for i in range(len(s)): #loop over the length of one fragment (should be equal)
+			if s[i] is not t[i]: #compare each position to the other string
+		 		lengthlist.append(i) #add a random number to the empty list
+		print len(lengthlist)# the length of the list is the total number of mismatches
+
+		
