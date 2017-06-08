@@ -1,3 +1,4 @@
+#code for Rosalind problem to find GC content
 from __future__ import division
 def gc_content(seq):
 #returns GC percentage of each DNA sequence
