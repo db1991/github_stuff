@@ -1,4 +1,4 @@
-
+#code to solve rosalind problem for calculating hamming distance
 with open('rosalind_HAMM.txt') as f:
 	s = f.readline().strip()
 	t = f.readline().strip()
